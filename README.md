@@ -1,5 +1,5 @@
 # itaiching
-## My Practice Note of Itaiching 
+## My Practice Note of Itaiching
 
 太极拳傳統上使用像[[金刚捣碓]]、[[懒扎衣]]、[[单鞭]]來名稱招式，
 這招式在不同門派上的演繹不盡相同，
@@ -72,7 +72,7 @@ http://www.cntaijiquan.com/taijiquanpu/1267.html
     39 小擒打     
     40 抱头推山   
     41 六封四闭     
-    42 单鞭 
+    42 单鞭
     43 前招       
     44 后招        
     45 野马分鬃    
@@ -105,8 +105,8 @@ http://www.cntaijiquan.com/taijiquanpu/1267.html
     72 当头炮     
     73 金刚捣碓    
     74 收势
-    
- 
+
+
 
 References:
 - http://www.itaiching.com
@@ -114,3 +114,6 @@ References:
 - https://tutorial.djangogirls.org/en/django_start_project/
 - https://git-scm.com/book/en/Git-Basics-Tagging
    # itaiching
+
+Videos:
+- http://www.tudou.com/listplay/xDVpYZEI6bE/T9Rnp_-N3SU.html

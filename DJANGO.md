@@ -1,11 +1,15 @@
 
 # Command lines
     django-admin startproject mysite
+    
     cd mysite
     ./manage.py startapp itaiching
     
-    ./manage.py makemirgrations
+    ./manage.py makemigrations
     ./manage.py migrate
+    
+    ./manage.py createsuperuser
+    
     ./manage.py runserver $IP:$PORT
     
     

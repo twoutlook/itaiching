@@ -7,6 +7,8 @@
     pip install django
     pip install --upgrade pip
     
+# .gitignore
+    myvenv
 
 # Checking commands  
     python --version

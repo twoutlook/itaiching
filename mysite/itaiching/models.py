@@ -12,29 +12,33 @@ class TaichiStyle(models.Model):
         return self.title
     class Meta:
         verbose_name = "線路"
-        verbose_name_plural = "線路"
+        verbose_name_plural = "(1)線路"
         
     # Set is a keyword
 class TaichiSet(models.Model):
-    taichistyle = models.ForeignKey(TaichiStyle, on_delete=models.CASCADE)
-    num = models.IntegerField(default=0,verbose_name="第幾式")
-    title = models.CharField(max_length=200,verbose_name="名稱")
-    description = models.CharField(max_length=200,verbose_name="說明")
-    # remarks = models.CharField(max_length=200)
+    taichistyle = models.ForeignKey(TaichiStyle, on_delete=models.CASCADE,verbose_name="線路名稱")
+    # num = models.IntegerField(default=0,verbose_name="第幾式")
+    title = models.CharField(max_length=200,verbose_name="招式名稱")
+    description = models.CharField(max_length=200,verbose_name="招式說明")
+    mynote = models.CharField(default=".", max_length=600,verbose_name="我的筆記")
+   # remarks = models.CharField(max_length=200)
     def __str__(self):
         return self.title
     class Meta:
-        verbose_name = "招式"
-        verbose_name_plural = "招式"
+        verbose_name = "(2)招式"
+        verbose_name_plural = "(2)招式"
     
 class TaichiMove(models.Model):
     taichiset = models.ForeignKey(TaichiSet, on_delete=models.CASCADE)
     num = models.IntegerField(default=0,verbose_name="第幾動")
-    title = models.CharField(max_length=200,verbose_name="口訣")
-    description = models.CharField(max_length=200,verbose_name="要求")
+    mnemonic = models.CharField(default=".",max_length=20,verbose_name="助憶")
+    title = models.CharField(max_length=200,verbose_name="動作口訣")
+    description = models.CharField(max_length=200,verbose_name="動作要求")
+    mynote = models.CharField(default=".", max_length=600,verbose_name="我的筆記")
+    
     # remarks = models.CharField(max_length=200)
     def __str__(self):
         return self.title
     class Meta:
-        verbose_name = "動作"
-        verbose_name_plural = "動作"
+        verbose_name = "(3)動作"
+        verbose_name_plural = "(3)動作"

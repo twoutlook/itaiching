@@ -18,13 +18,15 @@ class TaichiStyleAdmin(admin.ModelAdmin):
 admin.site.register(TaichiStyle,TaichiStyleAdmin)
 
 class TaichiSetAdmin(admin.ModelAdmin):
-    list_display=['taichistyle','title','description']
+    # list_display=['taichistyle','title','description']
+    list_display=['taichistyle','title']
+    
     ordering = ['taichistyle','title']
 admin.site.register(TaichiSet,TaichiSetAdmin)
 
 
 class TaichiMoveAdmin(admin.ModelAdmin):
-    list_display=['taichiset','num','title','description']
+    list_display=['taichiset','num','mnemonic','title','description']
     ordering = ['taichiset', 'num']
 admin.site.register(TaichiMove,TaichiMoveAdmin)
 

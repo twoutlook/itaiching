@@ -19,8 +19,8 @@ admin.site.register(TaichiStyle,TaichiStyleAdmin)
 
 class TaichiSetAdmin(admin.ModelAdmin):
     # list_display=['taichistyle','title','description']
-    list_display=['taichistyle','title']
-    
+    list_display=['taichistyle','title','id']
+
     ordering = ['taichistyle','title']
 admin.site.register(TaichiSet,TaichiSetAdmin)
 
@@ -29,7 +29,3 @@ class TaichiMoveAdmin(admin.ModelAdmin):
     list_display=['taichiset','num','mnemonic','title','description']
     ordering = ['taichiset', 'num']
 admin.site.register(TaichiMove,TaichiMoveAdmin)
-
-
-
-

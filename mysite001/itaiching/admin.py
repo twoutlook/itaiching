@@ -26,6 +26,6 @@ admin.site.register(TaichiSet,TaichiSetAdmin)
 
 
 class TaichiMoveAdmin(admin.ModelAdmin):
-    list_display=['stylenum','taichiset','num','mnemonic','title','description']
-    ordering = ['taichiset', 'num']
+    list_display=['stylenum', 'setnum','taichiset','movenum','mnemonic','title','description']
+    ordering = ['stylenum','taichiset', 'setnum', 'movenum']
 admin.site.register(TaichiMove,TaichiMoveAdmin)

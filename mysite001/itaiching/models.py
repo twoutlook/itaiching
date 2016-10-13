@@ -31,8 +31,9 @@ class TaichiSet(models.Model):
 class TaichiMove(models.Model):
     stylenum= models.IntegerField(default=0,verbose_name="幾式")
     taichiset = models.ForeignKey(TaichiSet, on_delete=models.CASCADE)
+    setnum = models.IntegerField(default=0,verbose_name="第幾式")
 
-    num = models.IntegerField(default=0,verbose_name="第幾動")
+    movenum = models.IntegerField(default=0,verbose_name="第幾動")
     mnemonic = models.CharField(default=".",max_length=20,verbose_name="助憶")
     title = models.CharField(max_length=200,verbose_name="動作口訣")
     description = models.CharField(max_length=200,verbose_name="動作要求")

@@ -26,9 +26,11 @@ def style19(request):
     # subtotal=Item012.objects.values('f03').annotate(sumf08=Sum('f08'),sumf09=Sum('f09'),sumf10=Sum('f10'),sumf11=Sum('f11'),sumf11v2=Sum('f11')/24)
 
 
-    item_list = TaichiMove.objects.filter(stylenum=19).order_by('taichiset', 'num')[:400]
+    item_list = TaichiMove.objects.filter(stylenum=19).order_by('setnum', 'movenum')[:3000]
+    # item_list = TaichiMove.objects.filter(stylenum=19)
+
     # context = {'current_user':request.user,'page_title':'xxx','item_list': item_list,'subtotal':subtotal}
-    context = {'current_user':request.user,'page_title':'xxx','item_list': item_list}
+    context = {'current_user':request.user,'page_title':'十九式','item_list': item_list}
 
     #使用ITEM005  template
     return render(request, 'itaiching/style19.html', context)

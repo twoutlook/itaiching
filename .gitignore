@@ -6,6 +6,6 @@ mysite/static
 
 # new version,
 # git status    ,to check is always better
-# git reset     ,alway can be reset before commit 
+# git reset     ,alway can be reset before commit
 
-mysite001/static
+mysite*/static

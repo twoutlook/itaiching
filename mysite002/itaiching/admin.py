@@ -6,6 +6,36 @@ from .models import TaichiStyle
 from .models import TaichiSet
 from .models import TaichiMove
 
+
+
+from import_export import resources
+# from core.models import Book
+#
+# class BookResource(resources.ModelResource):
+#
+#     class Meta:
+#         model = Book
+from import_export.admin import ImportExportModelAdmin
+
+# class BookAdmin(ImportExportModelAdmin):
+#     resource_class = BookResource
+
+from import_export import resources
+class TaichiMoveResource(resources.ModelResource):
+    class Meta:
+        model = TaichiMove
+
+class TaichiMoveAdmin(ImportExportModelAdmin):
+    resource_class = TaichiMoveResource
+admin.site.register(TaichiMove,TaichiMoveAdmin)
+# class TaichiMoveAdmin(admin.ModelAdmin):
+#     list_display=['stylenum', 'setnum','movenum','pagenum','mnemonic','title','description']
+#     ordering = ['-stylenum', '-setnum', '-movenum']
+# admin.site.register(TaichiMove,TaichiMoveAdmin)
+
+
+
+
 # only show def __str__(self):
 # admin.site.register(TaichiStyle)
 # admin.site.register(TaichiSet)
@@ -23,9 +53,3 @@ class TaichiSetAdmin(admin.ModelAdmin):
 
     ordering = ['taichistyle','title']
 admin.site.register(TaichiSet,TaichiSetAdmin)
-
-
-class TaichiMoveAdmin(admin.ModelAdmin):
-    list_display=['stylenum', 'setnum','taichiset','movenum','mnemonic','title','description']
-    ordering = ['stylenum','taichiset', 'setnum', 'movenum']
-admin.site.register(TaichiMove,TaichiMoveAdmin)

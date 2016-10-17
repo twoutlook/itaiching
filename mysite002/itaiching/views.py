@@ -24,6 +24,13 @@ def style19(request):
     context = {'current_user':request.user,'page_title':'十九式','item_list': item_list}
     return render(request, 'itaiching/style19.html', context)
 
+def route38(request):
+    # if not request.user.is_authenticated:
+    #      return redirect('/')
+    item_list = TaichiMove.objects.filter(stylenum=38).order_by('setnum', 'movenum')[:3000]
+    context = {'current_user':request.user,'page_title':'三十八式','item_list': item_list}
+    return render(request, 'itaiching/route38.html', context)
+
 def style19detail(request, setnum):
     # if not request.user.is_authenticated:
     #      return redirect('/')

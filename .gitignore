@@ -9,3 +9,5 @@ mysite/static
 # git reset     ,alway can be reset before commit
 
 mysite*/static
+
+*.zip
